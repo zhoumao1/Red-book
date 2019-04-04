@@ -77,11 +77,11 @@ s, i, em {
 }
 /*公共类*/
 .w {
-    /*版心 提取 */
-    width: 1200px;
-    padding: 0 5px;
-    margin-left: auto;
-    margin-right: auto;
+	 /*版心 提取 */
+	 width: 1120px;
+    margin: 0 auto;
+    overflow-x: auto;
+    padding-top: 55px;
 }
 .fl {
     float: left;
