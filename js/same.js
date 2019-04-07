@@ -81,12 +81,6 @@ $(function () {
 			"上海市互联网举报中心"
 		]
 	]
-	console.log(footBott);
-	$.each(footBott, function (k ,v) {
-		$.each(v, function (k, v) {
-			console.log(v);
-		})
-	})
 	var footer = new AutoTemp('#footer-right-tmp', footRight, '.right')
 	var footerBottom = new AutoTemp('#footer-bottom-tmp', footBott, '.inner-bottom')
 })
