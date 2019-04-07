@@ -14,7 +14,7 @@
 <body>
 	<header></header>
 	<section>
-		<div class="w clearfix">
+		<!--<div class="w clearfix">-->
 			
 		
 		<div class="sum">
@@ -97,7 +97,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	<!--</div>-->
 	</section>
 	<footer>
 		<div class="inner-top">
@@ -118,6 +118,49 @@
 	</footer>
 </body>
 </html>
+<script type="text/html" id="header-tmp">
+	<% $.each(headerData, function (k, v) { %>
+		<div class="w clearfix">
+			<img src="<%= v.logo %>" alt="小红书_logo" class="logo">
+			<div class="menu-nav">
+				<!-- 5个a, 加链接-->
+				<% $.each(v.nav, function (k, v) { %>
+					<a href=<%= v.link %>><span><%= v.title %></span></a>
+				<% }) %>
+				<div class="about-item" style="display:none">
+						<% $.each(v.nav[2].tab, function (k, v) { %>
+							<a href=<%= v.link %>><%= v.text %></a>
+						<% }) %>
+				</div>
+			</div>
+		</div>
+	<% }) %>
+</script>
+<script type="text/html" id="footer-right-tmp">
+	<% $.each(data, function (k, v) { %>
+		<div class="breed">
+			<i></i>
+			<div class="all-tabs">
+				<span class="tab top"><%= v.title %></span>
+				<% $.each(v.tab, function (k, v) { %>
+					<a href="" class="tab"><%= v %></a>
+				<% }) %>	
+			</div>
+		</div>
+	<% }) %>
+</script>
+<script type="text/html" id="footer-bottom-tmp">
+	<div class="inner">
+		<% $.each(data, function (k, v) { %>
+			<div class="info">
+				<% $.each(v, function (k, v) { %>
+					<span><%= v %></span>
+				<% }) %>
+			</div>
+		<% }) %>
+	</div>
+</script>
+
 <script type="text/template" id="model1">
 	<div class="sum">
 		<div class="head">
@@ -168,25 +211,19 @@
 			<div class="inner"><%= head3.inner2 %></div>
 		</div>
 		<div class="middle-topic">
-			<div class="inner">
-				<h4>基础信息</h4>
-				<ul>
-					<div class="main">
-						<p class="topadd">账号名字</p>
-					</div>
-					<div class="main">
-						<p class="topadd">品牌简介</p>
-					</div>
-					<div class="main">
-						<p class="topadd">行业类别</p>
-					</div>
-					<div class="main">
-						<p class="topadd">所在地</p>
-					</div>
-				</ul>
-			</div>
-			<div class="inner"></div>
-			<div class="inner"></div>
+			<% for(var m=0;m<inner.length;m++){ %>
+				<div class="inner">
+					<h4><%= inner[i].h4 %></h4>
+					<ul>
+						<% for(var l=0;l<inner[i].topadd.length;l++){ %>
+							<div class="main">
+								<p class="topadd"><%= inner[i].topadd[i] %></p>
+							</div>
+						<% } %>
+					</ul>
+				</div>	
+			<% } %>
+			
 		</div>
 	</div>
 </script>	
@@ -206,13 +243,14 @@
 			var html=_.template(temp);
 			var cent=html({head:data.head,cont:data.conts,cnt:data.a1});
 			$("section").append(cent)
-		}
+		};
 		function andtwo(datas){
 			var temp1=$("#model2").html();
 			var html1=_.template(temp1);
 			var cends=html1({headtwo:datas.headtwo,conted:datas.contes});
 			$("section").append(cends)
-		}
+		};
 	})
 	
-</script><script src="js/same.js" type="text/javascript"></script>
+</script>
+<script src="js/same.js" type="text/javascript"></script>
