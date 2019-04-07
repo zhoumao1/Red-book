@@ -78,10 +78,9 @@ s, i, em {
 /*公共类*/
 .w {
 	 /*版心 提取 */
-	 width: 1120px;
+	 width: 1000px;
     margin: 0 auto;
-    overflow-x: auto;
-    padding-top: 55px;
+    /* overflow-x: auto; */
 }
 .fl {
     float: left;
