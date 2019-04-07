@@ -12,7 +12,67 @@
 </head>
 <body>
 	<header></header>
-	<section> </section>
-	<footer></footer>
+	<section></section>
+	<footer>
+		<div class="inner-top">
+			<div class="inner clearfix">
+				<div class="left">
+					<img src="./img/logo-bottom.png" alt="" class="inner-left-logo">
+					<div class="icon-btn">
+						<a href="" class="tab wechat"><i></i></a>
+						<a href="" class="tab weibo"><i></i></a>
+						<a href="" class="tab ios"><i></i></a>
+						<a href="" class="tab android"><i></i></a>
+					</div>
+				</div>
+				<div class="right"></div>
+			</div>
+		</div>
+		<div class="inner-bottom"></div>
+	</footer>
 </body>
+<script type="text/html" id="header-tmp">
+	<% $.each(headerData, function (k, v) { %>
+		<div class="w clearfix">
+			<img src="<%= v.logo %>" alt="小红书_logo" class="logo">
+			<div class="menu-nav">
+				<!-- 5个a, 加链接-->
+				<% $.each(v.nav, function (k, v) { %>
+					<a href=<%= v.link %>><span><%= v.title %></span></a>
+				<% }) %>
+				<div class="about-item" style="display:none">
+						<% $.each(v.nav[2].tab, function (k, v) { %>
+							<a href=<%= v.link %>><%= v.text %></a>
+						<% }) %>
+				</div>
+			</div>
+		</div>
+	<% }) %>
+</script>
+<script type="text/html" id="footer-right-tmp">
+	<% $.each(data, function (k, v) { %>
+		<div class="breed">
+			<i></i>
+			<div class="all-tabs">
+				<span class="tab top"><%= v.title %></span>
+				<% $.each(v.tab, function (k, v) { %>
+					<a href="" class="tab"><%= v %></a>
+				<% }) %>	
+			</div>
+		</div>
+	<% }) %>
+</script>
+<script type="text/html" id="footer-bottom-tmp">
+	<div class="inner">
+		<% $.each(data, function (k, v) { %>
+			<div class="info">
+				<% $.each(v, function (k, v) { %>
+					<span><%= v %></span>
+				<% }) %>
+			</div>
+		<% }) %>
+	</div>
+</script>
+<script src="./js/same.js"></script>
+
 </html>
