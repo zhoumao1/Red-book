@@ -176,6 +176,12 @@
 .inner-enter .list .pra-two{
 	margin: 5px 0;
 }
+.inner-enter .list .momap{
+	color: #5b92e1;
+    font-weight: 500;
+    cursor: pointer;
+}
+
 .inner-detail{
     background: #fff;
     margin: 0 auto 55px auto;

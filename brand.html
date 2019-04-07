@@ -14,90 +14,6 @@
 <body>
 	<header></header>
 	<section>
-		<!--<div class="w clearfix">-->
-			
-		
-		<div class="sum">
-			<div class="head">
-				<h2>品牌认证优势</h2>
-				<p>官方品牌认证，多种特权专享</p>
-			</div>
-			<div class="conts">
-				<div class="conts-mand"></div>
-				<div class="all-list">
-					<div class="lists align">
-						<img src="//ci.xiaohongshu.com/4e30f1cc-997d-4f09-a556-15738a145cc5" class="pic">
-						<h6 class="title">官方认证</h6>
-						<p class="pra-one">统一标识</p>
-						<p class="pra-two">多样展示</p>
-					</div>
-					<div class="lists">
-						<img src="//ci.xiaohongshu.com/ce501c02-3d4d-4c9d-bfa5-b00ffaca04ae" class="pic">
-						<h6 class="title">品牌合作</h6>
-						<p class="pra-one">合作数据</p>
-						<p class="pra-two">一目了然</p>
-					</div>
-					<div class="lists"></div>
-					<div class="lists"></div>
-					<div class="lists align"></div>
-				</div>
-				<div class="bottom-back"></div>
-				<div class="bgc"></div>
-				<a href="javascript:;" class="btn">立即申请</a>
-			</div>
-		</div>
-		<div class="inner-enter">
-			<h2>品牌认证流程</h2>
-			<h5>通过品牌认证流程，成为官方品牌账号</h5>
-			<div class="inner-flow">
-				<div class="list">
-					<img src="//ci.xiaohongshu.com/946156ec-5ad1-4ad9-b0c3-770c7f54005e" class="icon">
-					<p class="title">1.点击立即申请</p>
-					<div class="content">
-						<p class="pra-one">使用小红书APP账号</p>
-						<p class="pra-two">登录ares.xiaohongshu.com</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="inner-detail">
-			<h4>品牌认证指南</h4>
-			<div class="top-topic">
-				<div class="inner select">国内品牌</div>
-				<div class="inner">国外品牌</div>
-			</div>
-			<div class="middle-topic">
-				<div class="inner">
-					<h4>基础信息</h4>
-					<ul>
-						<div class="main">
-							<p class="topadd">账号名字</p>
-						</div>
-						<div class="main">
-							<p class="topadd">品牌简介</p>
-						</div>
-						<div class="main">
-							<p class="topadd">行业类别</p>
-						</div>
-						<div class="main">
-							<p class="topadd">所在地</p>
-						</div>
-					</ul>
-				</div>
-				<div class="inner"></div>
-				<div class="inner"></div>
-			</div>
-		</div>
-		<div class="inner-issue">
-			<h2>常见问题</h2>
-			<div class="all-issue">
-				<div class="inner">
-					<h4 class="question">Q：什么是品牌方？</h4>
-					<p class="content">A：一般情况下，品牌方指商标注册人。</p>
-				</div>
-			</div>
-		</div>
-	<!--</div>-->
 	</section>
 	<footer>
 		<div class="inner-top">
@@ -172,7 +88,7 @@
 			<div class="all-list">
 				<% for(var i=0;i<cont.length;i++){ %>
 					<div class="lists">
-						<img src="//ci.xiaohongshu.com/ce501c02-3d4d-4c9d-bfa5-b00ffaca04ae" class="pic">
+						<img src="<%= cont[i].img %>" class="pic">
 						<h6 class="title"><%= cont[i].h6 %></h6>
 						<p class="pra-one"><%= cont[i].p1 %></p>
 						<p class="pra-two"><%= cont[i].p2 %></p>
@@ -191,14 +107,26 @@
 		<h5><%= headtwo.h5 %></h5>
 		<div class="inner-flow">
 			<% for(var j=0;j<conted.length;j++){ %>
-				<div class="list">
-					<img src="//ci.xiaohongshu.com/946156ec-5ad1-4ad9-b0c3-770c7f54005e" class="icon">
-					<p class="title"><%= conted[j].title %></p>
-					<div class="content">
-						<p class="pra-one"><%= conted[j].pra1 %></p>
-						<p class="pra-two"><%= conted[j].pra2 %></p>
+				<% if(j==1){ %>
+					<div class="list">
+						<img src="<%= conted[j].img %>" class="icon">
+						<p class="title"><%= conted[j].title %></p>
+						<div class="content">
+							<p class="pra-one"><%= conted[j].pra1 %></p>
+							<a class="pra-two momap"><%= conted[j].pra2 %></a>
+						</div>
 					</div>
-				</div>
+				<% }else{ %>
+					<div class="list">
+						<img src="<%= conted[j].img %>" class="icon">
+						<p class="title"><%= conted[j].title %></p>
+						<div class="content">
+							<p class="pra-one"><%= conted[j].pra1 %></p>
+							<p class="pra-two"><%= conted[j].pra2 %></p>
+						</div>
+					</div>
+					
+				<% } %>
 			<% } %>
 		</div>
 	</div>
@@ -213,11 +141,11 @@
 		<div class="middle-topic">
 			<% for(var m=0;m<inner.length;m++){ %>
 				<div class="inner">
-					<h4><%= inner[i].h4 %></h4>
+					<h4><%= inner[m].h4 %></h4>
 					<ul>
-						<% for(var l=0;l<inner[i].topadd.length;l++){ %>
+						<% for(var l=0;l<inner[m].topadd.length;l++){ %>
 							<div class="main">
-								<p class="topadd"><%= inner[i].topadd[i] %></p>
+								<p class="topadd"><%= inner[m].topadd[l] %></p>
 							</div>
 						<% } %>
 					</ul>
@@ -226,16 +154,31 @@
 			
 		</div>
 	</div>
-</script>	
+</script>
+<script type="text/template" id="model4">
+	<div class="inner-issue">
+		<h2>常见问题</h2>
+		<div class="all-issue">
+			<% for(var d=0;d<inners.length;d++){ %>
+				<div class="inner">
+					<h4 class="question"><%= inners[d].h4 %></h4>
+					<p class="content"><%= inners[d].content %></p>
+				</div>
+			<% } %>
+		</div>
+	</div>
+</script>
 <script type="text/javascript">
 	$(function(){
 		$.ajax({
 			type:"get",
-			url:"data_s/1.json",
+			url:"data_s/brand.json",
 			async:true,
 			success:function(data){
 				andone(data);
 				andtwo(data);
+				andthree(data);
+				andfour(data);
 			}
 		});
 		function andone(data){
@@ -249,6 +192,18 @@
 			var html1=_.template(temp1);
 			var cends=html1({headtwo:datas.headtwo,conted:datas.contes});
 			$("section").append(cends)
+		};
+		function andthree(datan){
+			var temp2=$("#model3").html();
+			var html2=_.template(temp2);
+			var cendsn=html2({head3:datan.head3,inner:datan.inners});
+			$("section").append(cendsn)
+		};
+		function andfour(dat){
+			var temp3=$("#model4").html();
+			var html3=_.template(temp3);
+			var cons=html3({inners:dat.innerd});
+			$("section").append(cons)
 		};
 	})
 	
