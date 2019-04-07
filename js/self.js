@@ -1,11 +1,10 @@
 $.ajax({
-        url: './data_s/1.json',
+        url: './data_s/community-1.json',
         type: 'get',
         dataType: 'json',
         success: function (response) {
         	var htmlList = '';
         	var data = response.data;
-        	console.log(data);
            	$.each(data, function(i,el) {
            		htmlList +='<div class="one">'+
            		'<img src="'+ el.img +'"><h4 class="weui_media_title">'+ el.text +'</h4>'+
@@ -26,13 +25,12 @@ $.ajax({
         
         
     $.ajax({
-        url: './data_s/2.json',
+        url: './data_s/community-2.json',
         type: 'get',
         dataType: 'json',
         success: function (response) {
         	var htmlList = '';
         	var arr = response.arr;
-        	console.log(arr);
            	$.each(arr, function(i,el) {
            		htmlList +='<div class="tow">'+
            		'<img src="'+ el.img +'"><h4 class="weui_media_title">'+ el.text +'</h4>'+
@@ -54,13 +52,12 @@ $.ajax({
         
         
     $.ajax({
-    url: './data_s/3.json',
+    url: './data_s/community-3.json',
     type: 'get',
     dataType: 'json',
     success: function (response) {
     	var htmlList = '';
     	var add = response.add;
-    	console.log(add);
        	$.each(add, function(i,el) {
        		htmlList +='<div class="tre">'+
        		'<img src="'+ el.img +'"><h4 class="weui_media_title">'+ el.text +'</h4>'+
@@ -82,13 +79,12 @@ $.ajax({
         
         
     $.ajax({
-        url: './data_s/4.json',
+        url: './data_s/community-4.json',
         type: 'get',
         dataType: 'json',
         success: function (response) {
         	var htmlList = '';
         	var ass = response.ass;
-        	console.log(ass);
            	$.each(ass, function(i,el) {
            		htmlList +='<div class="fur">'+
            		'<img src="'+ el.img +'"><h4 class="weui_media_title">'+ el.text +'</h4>'+
