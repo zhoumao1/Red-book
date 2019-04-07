@@ -1,0 +1,273 @@
+.sum{
+	background: #fff;
+    padding: 86px 0 0 0;
+    text-align: center;
+}
+.head h2{
+	color:#333;
+	font-size: 25px;
+	margin-bottom: 10px; 
+	text-align: center;
+}
+.head p{
+	color: #999;
+	font-size: 13px;
+	margin: 0 0 48px 0;
+	text-align: center;
+}
+.conts{
+	width: 1080px;
+	margin: 0 auto 40px auto;
+	position: relative;
+	height: 432px;
+}
+.conts .conts-mand{
+	background: linear-gradient(to right,#ff5267,#ff7d8d);
+	height: 365px;
+	width: 980px;
+	border-radius: 8px;
+	margin-left: 50px;
+	z-index: 15;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.conts .all-list{
+	overflow: hidden;
+	position: absolute;
+	top: 50px;
+	left: 10px;
+	z-index: 19;
+	text-align: center;
+}
+.conts .all-list .lists{
+	background: #fff;
+	width: 192px;
+	height: 233px;
+	float: left;
+	border-radius: 4px;
+	margin: 0 10px;
+}
+.conts .all-list .align{
+	-webkit-box-shadow: -2px 0 30px 0 rgba(255,39,65,0.1);
+    box-shadow: -2px 0 30px 0 rgba(255,39,65,0.1);
+}
+.conts .all-list .lists .pic{
+	width: 60px;
+	height: 60px;
+	margin: 35px 0 15px 0;
+}
+.conts .all-list .lists .title{
+	font-size: 18px;
+	margin: 0 0 10px 0;
+	color: #555;
+}
+.conts .all-list .lists .pra-one{
+	font-size: 15px;
+	color: #999;
+	margin: 0 0 5px 0;
+}
+.conts .all-list .lists .pra-two{
+	font-size: 15px;
+	color: #999;
+	margin: 0 0 5px 0;
+}
+.conts .bottom-back{
+	background: url(//ci.xiaohongshu.com/1b3a0f42-da7d-481e-8d4f-51cfa8943373) no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+    width: 834px;
+    height: 84px;
+    display: block;
+    z-index: 2;
+    position: absolute;
+    bottom: 1px;
+    left: 114px;
+}
+.conts .bgc{
+	width: 900px;
+    height: 50px;
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    -webkit-box-shadow: 0 3px 60px 0 rgba(255,39,65,0.4);
+    box-shadow: 0 3px 60px 0 rgba(255,39,65,0.4);
+    position: absolute;
+    bottom: 67px;
+    left: 50%;
+    margin-left: -450px;
+    z-index: 3;
+}
+.conts .btn{
+	width: 240px;
+    height: 50px;
+    border-radius: 25px;
+    -webkit-box-shadow: 0 0 25px 0 rgba(255,39,65,0.1);
+    box-shadow: 0 0 25px 0 rgba(255,39,65,0.1);
+    line-height: 50px;
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    bottom: 44px;
+    left: 50%;
+    color: #ff2741;
+    font-size: 22px;
+    font-weight: 500;
+    z-index: 20;
+    margin-left: -120px;
+}
+.inner-enter{
+	background: #f7f7f7;
+    height: 508px;
+    text-align: center;
+    padding: 60px 0 0 0;
+}
+.inner-enter h2{
+	font-size: 25px;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 10px 0;
+}
+.inner-enter h5{
+	font-size: 13px;
+    color: #999;
+    font-weight: normal;
+    margin: 0 0 50px 0;
+}
+.inner-enter .inner-flow{
+	position: relative;
+    width: 1080px;
+    margin: 0 auto;
+}
+.inner-enter .inner-flow .list{
+	width: 320px;
+    height: 240px;
+    text-align: center;
+    background: #fff;
+    color: #2c2c2c;
+    font-size: 20px;
+    font-weight: 500;
+    float: left;
+    margin: 0 20px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.03);
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.03);
+}
+.inner-enter .list .icon{
+	width: 96px;
+    height: 37px;
+    display: block;
+    margin-top: 15px;
+}
+.inner-enter .list .title{
+	margin: 25px 0 0 0;
+}
+.inner-enter .list .content{
+	font-size: 16px;
+    line-height: 1.5;
+    color: #747474;
+    font-weight: normal;
+    margin: 18px 0 0 0;
+}
+.inner-enter .list .pra-one{
+	margin: 5px 0;
+}
+.inner-enter .list .pra-two{
+	margin: 5px 0;
+}
+.inner-detail{
+    background: #fff;
+    margin: 0 auto 55px auto;
+    width: 1030px;
+}
+.inner-detail h4{
+	text-align: center;
+    font-size: 25px;
+    margin: 55px 0 0 0;
+}
+.inner-detail .top-topic{
+    margin: 50px 0 0 0;
+    overflow: hidden;
+}
+.inner-detail .top-topic .inner:first-child{
+    margin: 0 40px 0 295px;
+}
+.inner-detail .top-topic .inner{
+    width: 200px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 31px;
+    border: 1px solid #ff5267;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    color: #ff5267;
+    font-weight: 500;
+}
+.inner-detail .top-topic .select{
+    background: #ff5267;
+    color: #fff;
+}
+.inner-detail .middle-topic{
+    position: relative;
+}
+.inner-detail .middle-topic .inner{
+    overflow: hidden;
+    margin: 60px 0 0 0;
+}
+.inner-detail .inner h4{
+    float: left;
+    margin: 0;
+    width: 150px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: left;
+    color: #2c2c2c;
+    margin: 0 40px 0 0;
+}
+.inner-detail .inner ul{
+	float: left;
+    margin: 0;
+    width: 680px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.inner-detail .inner .main:first-child .topadd{
+	margin: 0 0 8px -28px;
+}
+.inner-detail .inner .topadd{
+    margin: 32px 0 8px -28px;
+}
+.inner-issue{
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    padding: 0 0 30px 0;
+}
+.inner-issue h2{
+    font-size: 25px;
+    line-height: 1.09;
+    letter-spacing: -0.6px;
+    text-align: center;
+    font-weight: 500;
+    padding: 64px 0 0 0;
+    margin: 0 0 50px 0;
+}
+.inner-issue .all-issue{
+    width: 1002px;
+    margin: 0 auto;
+}
+.inner-issue .all-issue .inner .question{
+    font-size: 20px;
+    line-height: 1.25;
+    text-align: left;
+    font-weight: normal;
+    color: #2c2c2c;
+    margin: 0;
+}
+.inner-issue .all-issue .inner .content{
+    font-size: 15px;
+    color: #818181;
+    margin: 16px 0 32px 0;
+}
