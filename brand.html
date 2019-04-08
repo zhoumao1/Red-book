@@ -7,12 +7,205 @@
 	<title>brand</title>
 	<link rel="stylesheet" href="./css/base.css">
 	<link rel="stylesheet" href="./css/same.css">
+	<link rel="stylesheet" href="./css/brand.css">
 	<script src="./js/jquery-1.10.1.js"></script>
 	<script src="./js/underscore.js"></script>
 </head>
 <body>
 	<header></header>
-	<section> </section>
-	<footer></footer>
+	<section>
+	</section>
+	<footer>
+		<div class="inner-top">
+			<div class="inner clearfix">
+				<div class="left">
+					<img src="./img/logo-bottom.png" alt="" class="inner-left-logo">
+					<div class="icon-btn">
+						<a href="" class="tab wechat"><i></i></a>
+						<a href="" class="tab weibo"><i></i></a>
+						<a href="" class="tab ios"><i></i></a>
+						<a href="" class="tab android"><i></i></a>
+					</div>
+				</div>
+				<div class="right"></div>
+			</div>
+		</div>
+		<div class="inner-bottom"></div>
+	</footer>
 </body>
 </html>
+<script type="text/html" id="header-tmp">
+	<% $.each(headerData, function (k, v) { %>
+		<div class="w clearfix">
+			<img src="<%= v.logo %>" alt="小红书_logo" class="logo">
+			<div class="menu-nav">
+				<!-- 5个a, 加链接-->
+				<% $.each(v.nav, function (k, v) { %>
+					<a href=<%= v.link %>><span><%= v.title %></span></a>
+				<% }) %>
+				<div class="about-item" style="display:none">
+						<% $.each(v.nav[2].tab, function (k, v) { %>
+							<a href=<%= v.link %>><%= v.text %></a>
+						<% }) %>
+				</div>
+			</div>
+		</div>
+	<% }) %>
+</script>
+<script type="text/html" id="footer-right-tmp">
+	<% $.each(data, function (k, v) { %>
+		<div class="breed">
+			<i></i>
+			<div class="all-tabs">
+				<span class="tab top"><%= v.title %></span>
+				<% $.each(v.tab, function (k, v) { %>
+					<a href="" class="tab"><%= v %></a>
+				<% }) %>	
+			</div>
+		</div>
+	<% }) %>
+</script>
+<script type="text/html" id="footer-bottom-tmp">
+	<div class="inner">
+		<% $.each(data, function (k, v) { %>
+			<div class="info">
+				<% $.each(v, function (k, v) { %>
+					<span><%= v %></span>
+				<% }) %>
+			</div>
+		<% }) %>
+	</div>
+</script>
+
+<script type="text/template" id="model1">
+	<div class="sum">
+		<div class="head">
+			<h2><%= head.h2 %></h2>
+			<p><%= head.p %></p>
+		</div>
+		<div class="conts">
+			<div class="conts-mand"></div>
+			<div class="all-list">
+				<% for(var i=0;i<cont.length;i++){ %>
+					<div class="lists">
+						<img src="<%= cont[i].img %>" class="pic">
+						<h6 class="title"><%= cont[i].h6 %></h6>
+						<p class="pra-one"><%= cont[i].p1 %></p>
+						<p class="pra-two"><%= cont[i].p2 %></p>
+					</div>
+				<% } %>
+			</div>
+			<div class="bottom-back"></div>
+			<div class="bgc"></div>
+			<a href="javascript:;" class="btn"><%= cnt %></a>
+		</div>
+	</div>
+</script>
+<script type="text/template" id="model2">
+	<div class="inner-enter">
+		<h2><%= headtwo.h2 %></h2>
+		<h5><%= headtwo.h5 %></h5>
+		<div class="inner-flow">
+			<% for(var j=0;j<conted.length;j++){ %>
+				<% if(j==1){ %>
+					<div class="list">
+						<img src="<%= conted[j].img %>" class="icon">
+						<p class="title"><%= conted[j].title %></p>
+						<div class="content">
+							<p class="pra-one"><%= conted[j].pra1 %></p>
+							<a class="pra-two momap"><%= conted[j].pra2 %></a>
+						</div>
+					</div>
+				<% }else{ %>
+					<div class="list">
+						<img src="<%= conted[j].img %>" class="icon">
+						<p class="title"><%= conted[j].title %></p>
+						<div class="content">
+							<p class="pra-one"><%= conted[j].pra1 %></p>
+							<p class="pra-two"><%= conted[j].pra2 %></p>
+						</div>
+					</div>
+					
+				<% } %>
+			<% } %>
+		</div>
+	</div>
+</script>	
+<script type="text/template" id="model3">
+	<div class="inner-detail">
+		<h4><%= head3.h4 %></h4>
+		<div class="top-topic">
+			<div class="inner select"><%= head3.inner1 %></div>
+			<div class="inner"><%= head3.inner2 %></div>
+		</div>
+		<div class="middle-topic">
+			<% for(var m=0;m<inner.length;m++){ %>
+				<div class="inner">
+					<h4><%= inner[m].h4 %></h4>
+					<ul>
+						<% for(var l=0;l<inner[m].topadd.length;l++){ %>
+							<div class="main">
+								<p class="topadd"><%= inner[m].topadd[l] %></p>
+							</div>
+						<% } %>
+					</ul>
+				</div>	
+			<% } %>
+			
+		</div>
+	</div>
+</script>
+<script type="text/template" id="model4">
+	<div class="inner-issue">
+		<h2>常见问题</h2>
+		<div class="all-issue">
+			<% for(var d=0;d<inners.length;d++){ %>
+				<div class="inner">
+					<h4 class="question"><%= inners[d].h4 %></h4>
+					<p class="content"><%= inners[d].content %></p>
+				</div>
+			<% } %>
+		</div>
+	</div>
+</script>
+<script type="text/javascript">
+	$(function(){
+		$.ajax({
+			type:"get",
+			url:"data_s/brand.json",
+			async:true,
+			success:function(data){
+				andone(data);
+				andtwo(data);
+				andthree(data);
+				andfour(data);
+			}
+		});
+		function andone(data){
+			var temp=$("#model1").html();
+			var html=_.template(temp);
+			var cent=html({head:data.head,cont:data.conts,cnt:data.a1});
+			$("section").append(cent)
+		};
+		function andtwo(datas){
+			var temp1=$("#model2").html();
+			var html1=_.template(temp1);
+			var cends=html1({headtwo:datas.headtwo,conted:datas.contes});
+			$("section").append(cends)
+		};
+		function andthree(datan){
+			var temp2=$("#model3").html();
+			var html2=_.template(temp2);
+			var cendsn=html2({head3:datan.head3,inner:datan.inners});
+			$("section").append(cendsn)
+		};
+		function andfour(dat){
+			var temp3=$("#model4").html();
+			var html3=_.template(temp3);
+			var cons=html3({inners:dat.innerd});
+			$("section").append(cons)
+		};
+	})
+	
+</script>
+<script src="js/same.js" type="text/javascript"></script>

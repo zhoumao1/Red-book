@@ -1,0 +1,135 @@
+header{
+	width: 100%;
+	height: 50px;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1001;
+	-webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.04);
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.04);
+}
+header div img{
+	width: 72px;
+	height: 25px;
+	display: block;
+	float: left;
+	margin-right: 60px;
+	margin: 12px 60px 13px 0;
+}
+.menu-nav{
+	height: 50px;
+	float: left;
+}
+/* 顶部导航 */
+.menu-nav a{
+	width: 110px;
+	line-height: 50px;
+	text-align: center;
+	display: inline-block;
+	color: #555;
+	font-size: 14px;
+	position: relative;
+}
+.menu-nav a:nth-of-type(3){
+	cursor: pointer;
+	position: relative;
+	width: 110px;
+	line-height: 50px;
+	text-align: center;
+	display: inline-block;
+	color: #555;
+	font-size: 14px;
+}
+.about-item{
+	position: absolute;
+	/* top: 60px; */
+	width: 110px;
+	height: 146px;
+	z-index: 1000;
+	background: #fff;
+	border: 1px solid #eee;
+	color: #000;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 2px #eee;
+	box-shadow: 0 1px 2px #eee;
+}
+/* 内容区 */
+section{
+	/*padding-top: 140px;*/
+	/*width: 1180px;*/
+}
+/* 底部 */
+footer{
+	min-width: 1024px;
+	width: 100%;
+	height: 356px;
+	background: #39393b;
+}
+footer .inner-top{
+	overflow: hidden;
+	padding: 50px 0;
+	border-bottom: 1px solid rgba(216,216,216,0.2);
+}
+footer .inner-top .inner{
+	width: 940px;
+	margin: 0 auto;
+}
+
+.inner-left-logo{
+	width: 214px;
+	height: 87px;
+	display: block;
+}
+.icon-btn{
+	margin-top: 20px;
+	color: #fff;
+}
+.inner-top .inner .left {
+	float: left;
+}
+.inner-top .inner .right{
+	float: right;
+}
+.inner-top .inner .right .breed {
+	overflow: hidden;
+	color: #d5d5d5;
+	float: left;
+	margin-left: 55px;
+}
+.company{
+	font-size: 28px;
+	display: inline-block;
+	cursor: pointer;
+	float: left;
+	margin-right: 20px;
+	margin-top: -5px;
+}
+.all-tabs{
+	float: left;
+}
+.inner-top .inner .right .breed .all-tabs .tab.top {
+	font-weight: 600;
+	margin: 0 0 18px 0;
+	font-size: 14px;
+}
+.inner-top .inner .right .breed .all-tabs .tab {
+	color: #d5d5d5;
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	margin: 0 0 7px 0;
+}
+.inner-bottom .inner span {
+	color: #d5d5d5;
+}
+.inner-bottom .inner {
+	margin: 0 auto;
+	color: #d5d5d5;
+	font-size: 12px;
+	margin: 6px 0 0 0;
+}
+.inner-bottom .inner .info {
+	text-align: center;
+	margin: 5px 0 12px 0;
+}
